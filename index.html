@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Innovative Software & Web Development Solutions | Inabia</title>
+
+    <meta name="description"
+        content="Professional web development, software engineering, mobile applications, AI solutions and digital transformation services.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #1d2939;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #0b2a4a;
+            letter-spacing: -1px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #344054;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #0b63ce;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+            background:
+                linear-gradient(135deg,
+                #071a33 0%,
+                #0b2a4a 55%,
+                #123f6d 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(54, 152, 255, 0.12);
+            top: -180px;
+            right: -100px;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 8px 18px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.15;
+            margin-bottom: 25px;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: #55b5ff;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #d0d9e5;
+            max-width: 650px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #1683e8;
+            color: white;
+            padding: 15px 28px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #086fc9;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.5);
+            color: white;
+            padding: 15px 28px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0b2a4a;
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            padding: 55px 8%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            background: #f7f9fc;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-box h2 {
+            font-size: 38px;
+            color: #0b63ce;
+            margin-bottom: 5px;
+        }
+
+        .stat-box p {
+            color: #667085;
+            font-size: 15px;
+        }
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .section {
+            padding: 90px 8%;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+            margin-bottom: 55px;
+        }
+
+        .section-heading span {
+            color: #0b63ce;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+        }
+
+        .section-heading h2 {
+            font-size: 42px;
+            margin-top: 12px;
+            margin-bottom: 18px;
+            color: #101828;
+        }
+
+        .section-heading p {
+            color: #667085;
+            font-size: 17px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            padding: 35px;
+            border: 1px solid #e4e7ec;
+            border-radius: 10px;
+            transition: 0.3s;
+            background: white;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(16, 24, 40, 0.08);
+            border-color: #b9d9f7;
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            background: #eaf4ff;
+            color: #0b63ce;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 22px;
+        }
+
+        .service-card h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+            color: #101828;
+        }
+
+        .service-card p {
+            color: #667085;
+            font-size: 15px;
+        }
+
+        /* =========================
+           TECHNOLOGY SECTION
+        ========================= */
+
+        .technology {
+            background: #0b2a4a;
+            color: white;
+        }
+
+        .technology .section-heading h2 {
+            color: white;
+        }
+
+        .technology .section-heading p {
+            color: #b9c7d8;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .tech-box {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .tech-box:hover {
+            background: #1683e8;
+            transform: translateY(-5px);
+        }
+
+        /* =========================
+           WHY CHOOSE US
+        ========================= */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .why-content h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #101828;
+        }
+
+        .why-content p {
+            color: #667085;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .feature {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+
+        .check {
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            border-radius: 50%;
+            background: #e8f5ee;
+            color: #1d9a57;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .feature h4 {
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+
+        .feature p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .why-image {
+            min-height: 430px;
+            border-radius: 15px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(11,42,74,0.95),
+                    rgba(22,131,232,0.75)
+                ),
+                url("https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process {
+            background: #f7f9fc;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .process-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e4e7ec;
+        }
+
+        .process-number {
+            font-size: 38px;
+            font-weight: 800;
+            color: #d9eafa;
+            margin-bottom: 15px;
+        }
+
+        .process-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .process-card p {
+            color: #667085;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            padding: 90px 8%;
+            background: linear-gradient(135deg, #0b63ce, #0b2a4a);
+            text-align: center;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .cta p {
+            color: #d8e8f7;
+            max-width: 650px;
+            margin: auto;
+            margin-bottom: 30px;
+            font-size: 17px;
+        }
+
+        .cta .btn-primary {
+            background: white;
+            color: #0b63ce;
+            display: inline-block;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #071a33;
+            color: #b8c4d2;
+            padding: 65px 8% 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            max-width: 420px;
+            font-size: 14px;
+        }
+
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 18px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width: 992px) {
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media(max-width: 768px) {
+
+            .navbar {
+                padding: 18px 6%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 80px 6%;
+                min-height: 600px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .section {
+                padding: 70px 6%;
+            }
+
+            .section-heading h2 {
+                font-size: 32px;
+            }
+
+            .services-grid,
+            .stats,
+            .tech-grid,
+            .process-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta h2 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+    <div class="logo">INABIA</div>
+
+    <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#technology">Technology</a>
+        <a href="#process">Our Process</a>
+        <a href="#about">Why Us</a>
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            Technology • Innovation • Digital Transformation
+        </div>
+
+        <h1>
+            Building <span>Powerful Digital Solutions</span>
+            for Modern Businesses
+        </h1>
+
+        <p>
+            We help organizations transform ideas into scalable digital
+            products through expert web development, custom software,
+            mobile applications, cloud technologies, AI solutions and
+            enterprise innovation.
+        </p>
+
+        <div class="hero-buttons">
+
+            <!-- MAIN LINK - USED ONLY ONCE -->
+            <a href="https://inabia.com/" class="btn-primary">
+                Explore Inabia
+            </a>
+
+            <!-- CONTACT LINK - USED ONLY ONCE -->
+            <a href="https://inabia.com/contact/" class="btn-outline">
+                Contact Our Team
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+    <div class="stat-box">
+        <h2>18+</h2>
+        <p>Years of Industry Experience</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>400+</h2>
+        <p>Projects Successfully Delivered</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>Global</h2>
+        <p>Technology & Business Solutions</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>24/7</h2>
+        <p>Innovation Driven Approach</p>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="section" id="services">
+
+    <div class="section-heading">
+
+        <span>Our Capabilities</span>
+
+        <h2>
+            Comprehensive Software & Technology Solutions
+        </h2>
+
+        <p>
+            From digital experiences to enterprise-grade platforms,
+            our technology teams build solutions designed for
+            performance, scalability and long-term growth.
+        </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service-card">
+
+            <div class="service-icon">💻</div>
+
+            <h3>Web Development</h3>
+
+            <p>
+                Modern responsive websites and web applications built
+                with powerful technologies, intuitive interfaces and
+                scalable architecture.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">⚙️</div>
+
+            <h3>Custom Software Development</h3>
+
+            <p>
+                Tailored software solutions designed around your
+                business requirements, workflows and long-term
+                digital transformation goals.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">📱</div>
+
+            <h3>Mobile App Solutions</h3>
+
+            <p>
+                Native and cross-platform mobile experiences designed
+                for performance, usability and seamless business
+                integration.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">🤖</div>
+
+            <h3>AI & Machine Learning</h3>
+
+            <p>
+                Intelligent automation, data-driven insights and AI
+                powered solutions that help businesses make smarter
+                decisions.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">☁️</div>
+
+            <h3>Cloud Solutions</h3>
+
+            <p>
+                Flexible cloud infrastructure and scalable digital
+                environments designed to support modern enterprise
+                operations.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">🔒</div>
+
+            <h3>Cybersecurity</h3>
+
+            <p>
+                Advanced security strategies and technology solutions
+                focused on protecting systems, networks and valuable
+                business data.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MOBILE APP FEATURE
+========================= -->
+
+<section class="section process">
+
+    <div class="why-grid">
+
+        <div class="why-content">
+
+            <span style="color:#0b63ce;font-weight:bold;">
+                MOBILE APPLICATION DEVELOPMENT
+            </span>
+
+            <h2>
+                Transform Your Business Ideas Into Powerful Mobile Experiences
+            </h2>
+
+            <p>
+                We create modern mobile applications designed to connect
+                businesses with their customers. Our approach focuses on
+                user experience, performance, scalability and seamless
+                integration with enterprise systems.
+            </p>
+
+            <!-- MOBILE APP LINK - USED ONLY ONCE -->
+            <a href="https://inabia.com/software-development/mobile-app-solutions/"
+               class="btn-primary">
+                Explore Mobile App Solutions
+            </a>
+
+        </div>
+
+        <div class="why-image"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TECHNOLOGY
+========================= -->
+
+<section class="section technology" id="technology">
+
+    <div class="section-heading">
+
+        <span style="color:#55b5ff;">Technology Expertise</span>
+
+        <h2>
+            Modern Technologies for Modern Businesses
+        </h2>
+
+        <p>
+            We leverage reliable frameworks, cloud platforms and
+            development technologies to build future-ready digital products.
+        </p>
+
+    </div>
+
+
+    <div class="tech-grid">
+
+        <div class="tech-box">HTML5</div>
+        <div class="tech-box">CSS3</div>
+        <div class="tech-box">JavaScript</div>
+        <div class="tech-box">React</div>
+        <div class="tech-box">Node.js</div>
+        <div class="tech-box">.NET</div>
+        <div class="tech-box">PHP</div>
+        <div class="tech-box">Python</div>
+        <div class="tech-box">AWS</div>
+        <div class="tech-box">AI / ML</div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY US
+========================= -->
+
+<section class="section" id="about">
+
+    <div class="why-grid">
+
+        <div class="why-image"></div>
+
+
+        <div class="why-content">
+
+            <span style="color:#0b63ce;font-weight:bold;">
+                WHY CHOOSE US
+            </span>
+
+            <h2>
+                Technology Expertise That Drives Business Growth
+            </h2>
+
+            <p>
+                Our teams combine technical expertise, industry knowledge
+                and innovative thinking to deliver solutions that solve
+                real business challenges.
+            </p>
+
+
+            <div class="feature">
+
+                <div class="check">✓</div>
+
+                <div>
+                    <h4>Experienced Technology Teams</h4>
+
+                    <p>
+                        Skilled professionals with expertise across
+                        software engineering and digital technologies.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="check">✓</div>
+
+                <div>
+                    <h4>Business-Focused Solutions</h4>
+
+                    <p>
+                        Technology strategies designed around measurable
+                        business outcomes and operational efficiency.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="check">✓</div>
+
+                <div>
+                    <h4>Scalable Digital Architecture</h4>
+
+                    <p>
+                        Flexible technology solutions that can grow with
+                        your organization.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROCESS
+========================= -->
+
+<section class="section process" id="process">
+
+    <div class="section-heading">
+
+        <span>How We Work</span>
+
+        <h2>
+            From Strategy to Digital Success
+        </h2>
+
+        <p>
+            Our structured approach helps transform complex requirements
+            into reliable and high-performing technology solutions.
+        </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+
+        <div class="process-card">
+
+            <div class="process-number">01</div>
+
+            <h3>Discovery</h3>
+
+            <p>
+                Understanding your business goals, challenges and
+                technology requirements.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">02</div>
+
+            <h3>Strategy</h3>
+
+            <p>
+                Creating a clear technology roadmap and solution
+                architecture.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">03</div>
+
+            <h3>Development</h3>
+
+            <p>
+                Building scalable applications using modern development
+                methodologies.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">04</div>
+
+            <h3>Growth</h3>
+
+            <p>
+                Supporting optimization, maintenance and continuous
+                innovation.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <h2>
+        Let's Build Your Next Digital Solution
+    </h2>
+
+    <p>
+        Partner with an experienced technology team to transform ideas
+        into innovative web, software and mobile solutions designed
+        for the future.
+    </p>
+
+    <!-- NO REPEATED PROVIDED LINK HERE -->
+
+    <a href="#services" class="btn-primary">
+        Explore Our Services
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div class="footer-brand">
+
+            <h3>INABIA</h3>
+
+            <p>
+                Delivering innovative IT, software and business solutions
+                that help organizations embrace technology, innovation
+                and digital transformation.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Solutions</h4>
+
+            <ul>
+                <li>Web Development</li>
+                <li>Software Engineering</li>
+                <li>Mobile Applications</li>
+                <li>AI & Machine Learning</li>
+                <li>Cloud Solutions</li>
+            </ul>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Expertise</h4>
+
+            <ul>
+                <li>Digital Transformation</li>
+                <li>Enterprise Solutions</li>
+                <li>Cybersecurity</li>
+                <li>IoT Development</li>
+                <li>Technology Consulting</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Professional Technology Solutions. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>

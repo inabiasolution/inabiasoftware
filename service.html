@@ -1,0 +1,1270 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Development Services | Custom Web Solutions</title>
+
+    <meta name="description"
+          content="Professional web development services for businesses seeking scalable websites, custom web applications, integrations, and modern digital experiences.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --blue: #155eef;
+            --blue-dark: #0b3da8;
+            --navy: #101828;
+            --text: #475467;
+            --muted: #667085;
+            --light: #f8fafc;
+            --border: #e4e7ec;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        header {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            background: rgba(255,255,255,.97);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: var(--navy);
+        }
+
+        .logo span {
+            color: var(--blue);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #344054;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--blue);
+        }
+
+        .nav-cta {
+            background: var(--blue);
+            color: #fff !important;
+            padding: 11px 19px;
+            border-radius: 7px;
+        }
+
+        .nav-cta:hover {
+            background: var(--blue-dark);
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 100px 0 90px;
+            background:
+                radial-gradient(circle at 85% 15%, #eaf2ff 0, transparent 35%),
+                linear-gradient(135deg, #fff, #f7faff);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .label {
+            display: inline-block;
+            color: var(--blue);
+            background: #eef4ff;
+            border-radius: 30px;
+            padding: 7px 14px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--navy);
+            font-size: clamp(42px, 5vw, 62px);
+            line-height: 1.08;
+            letter-spacing: -2px;
+            margin-bottom: 23px;
+        }
+
+        .hero-text {
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 23px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .primary {
+            background: var(--blue);
+            color: #fff;
+        }
+
+        .primary:hover {
+            background: var(--blue-dark);
+        }
+
+        .secondary {
+            border: 1px solid #cbd5e1;
+            color: var(--navy);
+            background: #fff;
+        }
+
+        .secondary:hover {
+            border-color: var(--blue);
+            color: var(--blue);
+        }
+
+        .hero-panel {
+            background: var(--navy);
+            border-radius: 18px;
+            padding: 35px;
+            box-shadow: 0 25px 60px rgba(16,24,40,.15);
+        }
+
+        .hero-panel h3 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 23px;
+        }
+
+        .feature {
+            display: flex;
+            gap: 14px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+
+        .feature:last-child {
+            border-bottom: none;
+        }
+
+        .feature-number {
+            color: #84adff;
+            font-weight: 800;
+        }
+
+        .feature strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .feature span {
+            color: #aeb8c8;
+            font-size: 13px;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 48px;
+        }
+
+        .section-heading.center {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-heading h2 {
+            color: var(--navy);
+            font-size: clamp(32px, 4vw, 45px);
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .section-heading p {
+            font-size: 17px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: var(--light);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 35px rgba(16,24,40,.08);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eef4ff;
+            color: var(--blue);
+            border-radius: 9px;
+            font-weight: 800;
+            margin-bottom: 19px;
+        }
+
+        .service-card h3 {
+            color: var(--navy);
+            font-size: 20px;
+            margin-bottom: 9px;
+        }
+
+        /* WHY US */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .dark-box {
+            background: var(--navy);
+            border-radius: 16px;
+            padding: 42px;
+            color: #fff;
+        }
+
+        .dark-box h3 {
+            font-size: 30px;
+            line-height: 1.2;
+            margin-bottom: 17px;
+        }
+
+        .dark-box p {
+            color: #cbd5e1;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .benefit {
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .benefit h3 {
+            color: var(--navy);
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
+
+        /* TECHNOLOGY */
+
+        .technology {
+            background: var(--light);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .tech-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .tech-card h3 {
+            color: var(--navy);
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        /* PROCESS */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process {
+            padding: 27px;
+            border-top: 3px solid var(--blue);
+            background: #fff;
+            box-shadow: 0 8px 25px rgba(16,24,40,.05);
+        }
+
+        .step {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .process h3 {
+            color: var(--navy);
+            margin-bottom: 9px;
+        }
+
+        /* FAQ */
+
+        .faq {
+            background: var(--light);
+        }
+
+        .faq-list {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        details {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            padding: 20px 23px;
+            margin-bottom: 13px;
+        }
+
+        summary {
+            cursor: pointer;
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        details p {
+            margin-top: 13px;
+            color: var(--text);
+        }
+
+        /* CTA */
+
+        .cta {
+            background: var(--blue);
+            color: #fff;
+            text-align: center;
+            padding: 85px 20px;
+        }
+
+        .cta h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.15;
+            margin-bottom: 17px;
+        }
+
+        .cta p {
+            max-width: 720px;
+            margin: auto auto 28px;
+            color: #e5edff;
+        }
+
+        .cta .btn {
+            background: #fff;
+            color: var(--blue);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b1220;
+            color: #98a2b3;
+            padding: 50px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 45px;
+            margin-bottom: 40px;
+        }
+
+        footer h3 {
+            color: #fff;
+            margin-bottom: 14px;
+        }
+
+        footer p {
+            max-width: 440px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 900px) {
+
+            .hero-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .tech-grid,
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            nav {
+                gap: 15px;
+            }
+        }
+
+        @media(max-width: 650px) {
+
+            header {
+                height: 65px;
+            }
+
+            nav a:not(.nav-cta) {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .service-grid,
+            .tech-grid,
+            .process-grid,
+            .benefits,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-panel,
+            .dark-box {
+                padding: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="container nav">
+
+        <a href="https://inabia.com/" class="logo">
+            Inabia<span>.</span>
+        </a>
+
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#approach">Approach</a>
+            <a href="#technology">Technology</a>
+            <a href="#faq">FAQ</a>
+
+            <a href="https://inabia.com/contact/" class="nav-cta">
+                Contact Us
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <span class="label">
+                WEB DEVELOPMENT SERVICES
+            </span>
+
+            <h1>
+                Build Digital Experiences That Move Your Business Forward
+            </h1>
+
+            <p class="hero-text">
+                Create high-performing websites and custom web applications
+                with a development approach focused on scalability, usability,
+                security, and long-term business value.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#services" class="btn primary">
+                    Explore Services
+                </a>
+
+                <a href="https://inabia.com/contact/" class="btn secondary">
+                    Discuss Your Project
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-panel">
+
+            <h3>
+                What We Build
+            </h3>
+
+            <div class="feature">
+
+                <div class="feature-number">01</div>
+
+                <div>
+                    <strong>Business Websites</strong>
+                    <span>Professional and responsive digital experiences</span>
+                </div>
+
+            </div>
+
+            <div class="feature">
+
+                <div class="feature-number">02</div>
+
+                <div>
+                    <strong>Web Applications</strong>
+                    <span>Custom platforms built around your workflows</span>
+                </div>
+
+            </div>
+
+            <div class="feature">
+
+                <div class="feature-number">03</div>
+
+                <div>
+                    <strong>Enterprise Solutions</strong>
+                    <span>Scalable systems for complex organizations</span>
+                </div>
+
+            </div>
+
+            <div class="feature">
+
+                <div class="feature-number">04</div>
+
+                <div>
+                    <strong>System Integrations</strong>
+                    <span>Connect applications, APIs, and business systems</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="label">
+                DIGITAL ENGINEERING
+            </span>
+
+            <h2>
+                Web Development Built Around Your Business Goals
+            </h2>
+
+            <p>
+                A successful website or web application needs more than an
+                attractive interface. It should be fast, accessible, secure,
+                easy to maintain, and capable of supporting your organization's
+                changing requirements.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="label">
+                OUR SERVICES
+            </span>
+
+            <h2>
+                Complete Web Development Capabilities
+            </h2>
+
+            <p>
+                From initial planning to deployment and ongoing improvement,
+                development services can be tailored to the needs of your
+                product, customers, and internal teams.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <article class="service-card">
+
+                <div class="service-icon">01</div>
+
+                <h3>Custom Web Development</h3>
+
+                <p>
+                    Build purpose-driven web platforms designed around specific
+                    business processes, customer needs, and operational goals.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">02</div>
+
+                <h3>Responsive Websites</h3>
+
+                <p>
+                    Deliver consistent experiences across desktops, tablets,
+                    and mobile devices with responsive interface development.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">03</div>
+
+                <h3>Web Applications</h3>
+
+                <p>
+                    Develop interactive applications that simplify workflows,
+                    manage information, and provide useful digital experiences.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">04</div>
+
+                <h3>API Integration</h3>
+
+                <p>
+                    Connect web applications with third-party services,
+                    enterprise platforms, databases, and internal systems.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">05</div>
+
+                <h3>Application Modernization</h3>
+
+                <p>
+                    Upgrade legacy applications and architectures to support
+                    improved performance, maintainability, and scalability.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">06</div>
+
+                <h3>Maintenance & Support</h3>
+
+                <p>
+                    Keep digital products reliable through monitoring,
+                    optimization, updates, testing, and ongoing improvements.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY -->
+
+<section>
+
+    <div class="container why-grid">
+
+        <div class="dark-box">
+
+            <h3>
+                Technology Should Make Business Simpler
+            </h3>
+
+            <p>
+                The right web solution can remove repetitive work, improve
+                customer experiences, connect disconnected systems, and give
+                teams better tools for making informed decisions.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <div class="section-heading">
+
+                <span class="label">
+                    WHY IT MATTERS
+                </span>
+
+                <h2>
+                    Designed for Performance and Growth
+                </h2>
+
+                <p>
+                    Every project should balance user experience, technical
+                    quality, security, and the ability to evolve over time.
+                </p>
+
+            </div>
+
+
+            <div class="benefits">
+
+                <div class="benefit">
+                    <h3>Scalable Architecture</h3>
+                    <p>
+                        Build systems that can grow as your users and business
+                        requirements increase.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>Better User Experience</h3>
+                    <p>
+                        Create intuitive interfaces that make digital products
+                        easier to use.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>Security Focus</h3>
+                    <p>
+                        Consider security throughout application design,
+                        development, and deployment.
+                    </p>
+                </div>
+
+                <div class="benefit">
+                    <h3>Long-Term Flexibility</h3>
+                    <p>
+                        Use maintainable solutions that can adapt as technology
+                        and business priorities change.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TECHNOLOGY -->
+
+<section class="technology" id="technology">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="label">
+                TECHNOLOGY
+            </span>
+
+            <h2>
+                Modern Tools for Modern Web Products
+            </h2>
+
+            <p>
+                Select technologies based on project requirements, performance,
+                integration needs, maintainability, and future scalability.
+            </p>
+
+        </div>
+
+
+        <div class="tech-grid">
+
+            <div class="tech-card">
+                <h3>Frontend</h3>
+                <p>
+                    Responsive interfaces, component-based development,
+                    accessibility, and modern browser experiences.
+                </p>
+            </div>
+
+            <div class="tech-card">
+                <h3>Backend</h3>
+                <p>
+                    Secure APIs, business logic, databases, authentication,
+                    and application services.
+                </p>
+            </div>
+
+            <div class="tech-card">
+                <h3>Cloud</h3>
+                <p>
+                    Cloud-ready applications, scalable infrastructure,
+                    deployment, and monitoring.
+                </p>
+            </div>
+
+            <div class="tech-card">
+                <h3>Data & AI</h3>
+                <p>
+                    Data-driven applications, intelligent features,
+                    automation, and analytics capabilities.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section id="approach">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="label">
+                DEVELOPMENT PROCESS
+            </span>
+
+            <h2>
+                From Business Challenge to Digital Product
+            </h2>
+
+            <p>
+                A structured development process helps teams stay aligned,
+                reduce unnecessary complexity, and deliver reliable results.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process">
+
+                <div class="step">STEP 01</div>
+
+                <h3>Discover</h3>
+
+                <p>
+                    Understand objectives, users, workflows, technical
+                    requirements, and existing systems.
+                </p>
+
+            </div>
+
+
+            <div class="process">
+
+                <div class="step">STEP 02</div>
+
+                <h3>Plan & Design</h3>
+
+                <p>
+                    Define architecture, user experience, integrations,
+                    functionality, and the development roadmap.
+                </p>
+
+            </div>
+
+
+            <div class="process">
+
+                <div class="step">STEP 03</div>
+
+                <h3>Develop & Test</h3>
+
+                <p>
+                    Build the solution while continuously testing functionality,
+                    performance, security, and usability.
+                </p>
+
+            </div>
+
+
+            <div class="process">
+
+                <div class="step">STEP 04</div>
+
+                <h3>Launch & Improve</h3>
+
+                <p>
+                    Deploy the product, monitor its performance, and continue
+                    improving it as business needs evolve.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MOBILE CROSS SELL -->
+
+<section class="services">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="label">
+                BEYOND THE WEB
+            </span>
+
+            <h2>
+                Extend Your Digital Experience to Mobile
+            </h2>
+
+            <p>
+                When customers and employees need access beyond the browser,
+                mobile applications can provide another powerful channel for
+                engagement, productivity, and connected services.
+            </p>
+
+        </div>
+
+
+        <div style="text-align:center;">
+
+            <a
+                href="https://inabia.com/software-development/mobile-app-solutions/"
+                class="btn primary"
+            >
+                Explore Mobile App Solutions
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq" id="faq">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <span class="label">
+                FAQ
+            </span>
+
+            <h2>
+                Web Development Questions
+            </h2>
+
+            <p>
+                Common questions businesses consider when planning a web
+                development project.
+            </p>
+
+        </div>
+
+
+        <div class="faq-list">
+
+            <details>
+                <summary>
+                    What is custom web development?
+                </summary>
+
+                <p>
+                    Custom web development creates websites or web applications
+                    specifically around an organization's requirements rather
+                    than relying entirely on an off-the-shelf solution.
+                </p>
+            </details>
+
+
+            <details>
+                <summary>
+                    Can a web application connect with existing software?
+                </summary>
+
+                <p>
+                    Yes. APIs and integration technologies can allow web
+                    applications to exchange information with databases,
+                    business platforms, third-party services, and other systems.
+                </p>
+            </details>
+
+
+            <details>
+                <summary>
+                    Why is scalable architecture important?
+                </summary>
+
+                <p>
+                    Scalable architecture helps a digital product handle
+                    increasing users, data, traffic, and functionality without
+                    requiring a complete rebuild.
+                </p>
+            </details>
+
+
+            <details>
+                <summary>
+                    Can an existing application be modernized?
+                </summary>
+
+                <p>
+                    Yes. Legacy applications can often be improved through
+                    architectural updates, interface improvements, integrations,
+                    cloud adoption, testing, and gradual modernization.
+                </p>
+            </details>
+
+
+            <details>
+                <summary>
+                    How should a business choose a web development partner?
+                </summary>
+
+                <p>
+                    Consider technical expertise, relevant project experience,
+                    communication, security practices, development methodology,
+                    scalability, and long-term support capabilities.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>
+        Have a Web Project in Mind?
+    </h2>
+
+    <p>
+        Turn your business requirements into a modern digital experience
+        designed for usability, performance, security, and future growth.
+    </p>
+
+    <a href="https://inabia.com/contact/" class="btn">
+        Start Your Project
+    </a>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>Inabia</h3>
+
+                <p>
+                    Technology and software engineering solutions for
+                    organizations building, modernizing, and scaling their
+                    digital capabilities.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Services</h3>
+
+                <div class="footer-links">
+                    <a href="#services">Web Development</a>
+                    <a href="#services">Web Applications</a>
+                    <a href="#services">API Integration</a>
+                    <a href="#technology">Cloud Technology</a>
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>Explore</h3>
+
+                <div class="footer-links">
+                    <a href="#approach">Development Process</a>
+                    <a href="#technology">Technology</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Inabia. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
+```
